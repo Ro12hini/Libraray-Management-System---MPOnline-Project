@@ -1,0 +1,26 @@
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.content-container {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  position: static;
+}
+
+.card {
+  margin-bottom: 0;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}

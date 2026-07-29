@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<div class="content-container bg-white rounded shadow-sm p-4">
+    <div class="row">
+        <div class="col-md-7 pe-md-5">
+            <h2 class="mb-4 fw-bold">Contact Us</h2>
+            <form asp-action="Index" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label small fw-bold">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label small fw-bold">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label small fw-bold">Your Message</label>
+                    <textarea name="message" class="form-control" id="message" rows="4" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary px-4">Submit Ticket</button>
+            </form>
+        </div>
+        <div class="col-md-5 mt-5 mt-md-0 border-start ps-md-4">
+            <h4 class="fw-bold mb-3">Support Desk</h4>
+            <p class="text-muted small">Have issues with broken links, missing inventory, or user accounts? Drop a message and our
+                support team will reach out within 24 hours.</p>
+            <hr class="my-4 text-muted">
+            <h6 class="fw-bold mb-1">Email</h6>
+            <p class="text-muted small mb-3">support@librarymanagement.com</p>
+            <h6 class="fw-bold mb-1">Hours</h6>
+            <p class="text-muted small">Mon - Fri: 9:00 AM - 6:00 PM</p>
+        </div>
+    </div>
+</div>

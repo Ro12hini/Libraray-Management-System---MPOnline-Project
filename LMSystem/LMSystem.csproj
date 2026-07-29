@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <!-- IMPORTANT: net8.0 (LTS) is used instead of net10.0.
+         Reason: Pomelo.EntityFrameworkCore.MySql (the MySQL provider) and several
+         Identity/EF tooling packages track LTS targets and may lag behind the very
+         latest .NET release. The .NET 10 SDK installed on this machine can build and
+         run net8.0 (and net9.0) projects without any extra install - just do NOT change
+         the <TargetFramework> below unless you have first confirmed on nuget.org that
+         Pomelo.EntityFrameworkCore.MySql has a stable net10.0-compatible release. -->
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>lmsystem-secrets-0001</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MySQL provider for EF Core (works with MySQL Workbench / MySQL Server) -->
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <!-- ASP.NET Core Identity (roles: Administrator, Librarian, Student/Member) -->
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.8" />
+  </ItemGroup>
+
+</Project>
