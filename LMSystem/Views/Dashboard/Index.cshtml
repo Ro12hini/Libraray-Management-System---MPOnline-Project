@@ -1,0 +1,47 @@
+@model DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<h2 class="mb-4">Admin Dashboard</h2>
+<div class="row g-4">
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-white" style="background-color: #4e73df;">
+            <div class="card-body p-4">
+                <h6 class="text-uppercase fw-semibold opacity-75 mb-1">Total Books</h6>
+                <h2 class="display-6 fw-bold mb-0">@Model.TotalBooks</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-white" style="background-color: #1cc88a;">
+            <div class="card-body p-4">
+                <h6 class="text-uppercase fw-semibold opacity-75 mb-1">Total Students</h6>
+                <h2 class="display-6 fw-bold mb-0">@Model.TotalStudents</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-white" style="background-color: #36b9cc;">
+            <div class="card-body p-4">
+                <h6 class="text-uppercase fw-semibold opacity-75 mb-1">Total Librarians</h6>
+                <h2 class="display-6 fw-bold mb-0">@Model.TotalLibrarians</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-white" style="background-color: #e74a3b;">
+            <div class="card-body p-4">
+                <h6 class="text-uppercase fw-semibold opacity-75 mb-1">Active Borrowings</h6>
+                <h2 class="display-6 fw-bold mb-0">@Model.TotalBorrowings</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-white" style="background-color: #f6c23e;">
+            <div class="card-body p-4">
+                <h6 class="text-uppercase fw-semibold opacity-75 mb-1">Total Publications</h6>
+                <h2 class="display-6 fw-bold mb-0">@Model.TotalPublications</h2>
+            </div>
+        </div>
+    </div>
+</div>
